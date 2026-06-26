@@ -1,0 +1,143 @@
+// ===================================
+// TOOL PAGE STYLES - AWS INSPIRED
+// ===================================
+
+.tool-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.tool-header {
+    padding: var(--spacing-2xl) 0;
+    border-bottom: 1px solid var(--border-color);
+    
+    .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--spacing-xs);
+        color: var(--text-secondary);
+        font-size: var(--font-size-base);
+        margin-bottom: var(--spacing-md);
+        transition: color var(--transition-fast);
+        
+        &:hover {
+            color: var(--aws-orange);
+        }
+        
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    
+    .tool-title {
+        font-size: var(--font-size-4xl);
+        font-weight: 700;
+        margin-bottom: var(--spacing-md);
+        color: var(--text-primary);
+        
+        @media (max-width: 768px) {
+            font-size: var(--font-size-3xl);
+        }
+    }
+    
+    .tool-description {
+        font-size: var(--font-size-lg);
+        color: var(--text-secondary);
+        max-width: 700px;
+        
+        @media (max-width: 768px) {
+            font-size: var(--font-size-base);
+        }
+    }
+}
+
+.tool-content {
+    flex: 1;
+    padding: var(--spacing-3xl) 0;
+    
+    .upload-zone {
+        position: relative;
+        background: var(--aws-card-bg);
+        border: 2px dashed var(--border-color);
+        border-radius: var(--radius-lg);
+        padding: var(--spacing-3xl);
+        text-align: center;
+        transition: all var(--transition-base);
+        cursor: pointer;
+        margin-bottom: var(--spacing-2xl);
+        
+        &:hover,
+        &.drag-over {
+            border-color: var(--aws-orange);
+            background: rgba(255, 153, 0, 0.05);
+            
+            .upload-icon {
+                color: var(--aws-orange);
+                transform: scale(1.1);
+            }
+        }
+        
+        .upload-icon {
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-md);
+            transition: all var(--transition-base);
+        }
+        
+        .upload-title {
+            font-size: var(--font-size-2xl);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-sm);
+            
+            @media (max-width: 768px) {
+                font-size: var(--font-size-xl);
+            }
+        }
+        
+        .upload-text {
+            color: var(--text-secondary);
+            font-size: var(--font-size-base);
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .file-input {
+            display: none;
+        }
+        
+        .btn-lg {
+            padding: 1rem 2rem;
+            font-size: var(--font-size-lg);
+            
+            @media (max-width: 768px) {
+                padding: 0.75rem 1.5rem;
+                font-size: var(--font-size-base);
+            }
+        }
+    }
+    
+    .features-list {
+        display: flex;
+        gap: var(--spacing-xl);
+        justify-content: center;
+        flex-wrap: wrap;
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            color: var(--text-secondary);
+            font-size: var(--font-size-base);
+            
+            svg {
+                color: var(--aws-orange);
+                flex-shrink: 0;
+            }
+            
+            @media (max-width: 768px) {
+                font-size: var(--font-size-sm);
+            }
+        }
+    }
+}
