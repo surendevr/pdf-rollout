@@ -1,86 +1,59 @@
-# PDF Rollout
+# PdfRollouts
 
-A modern, web-based PDF toolkit built with Angular. Perform various PDF operations including merging, splitting, compression, and format conversion - all in your browser.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.4.
 
-## ✨ Features
+## Development server
 
-- **Merge PDF** - Combine multiple PDF files into a single document
-- **Split PDF** - Divide PDF files into separate pages or sections
-- **Compress PDF** - Reduce PDF file size while maintaining quality
-- **PDF to Word** - Convert PDF documents to editable Word files
-- **PDF to Excel** - Extract data from PDFs to Excel spreadsheets
-- **PDF to PowerPoint** - Transform PDF pages into PowerPoint presentations
-
-## 🚀 Tech Stack
-
-- **Angular** - Modern web framework with standalone components
-- **TypeScript** - Type-safe development
-- **SCSS** - Advanced styling capabilities
-- **Signals** - Reactive state management
-
-## 📦 Getting Started
-
-### Prerequisites
-
-- Node.js (v18 or higher)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository
-```bash
-git clone <repository-url>
-cd pdf_rollout
-```
-
-2. Install dependencies
-```bash
-npm install
-```
-
-3. Start the development server
-```bash
-npm start
-```
-
-4. Open your browser and navigate to `http://localhost:4200`
-
-## 🏗️ Project Structure
-
-```
-src/
-├── app/
-│   ├── footer/          # Footer component
-│   ├── hero/            # Hero section component
-│   ├── pages/           # Page components
-│   │   ├── home/        # Landing page
-│   │   ├── merge-pdf/   # PDF merge tool
-│   │   ├── split-pdf/   # PDF split tool
-│   │   ├── compress-pdf/ # PDF compression tool
-│   │   ├── pdf-to-word/ # PDF to Word converter
-│   │   ├── pdf-to-excel/ # PDF to Excel converter
-│   │   └── pdf-to-ppt/  # PDF to PowerPoint converter
-│   └── tools-grid/      # Tools grid display component
-```
-
-## 🛠️ Build
-
-To build the project for production:
+To start a local development server, run:
 
 ```bash
-npm run build
+ng serve
 ```
 
-The build artifacts will be stored in the `dist/` directory.
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## 📄 License
+## Code scaffolding
 
-This project is licensed under the terms specified in the [LICENSE](LICENSE) file.
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-## 🤝 Contributing
+```bash
+ng generate component component-name
+```
 
-Contributions, issues, and feature requests are welcome!
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
----
+```bash
+ng generate --help
+```
 
-Built with ❤️ using Angular
+## Building
+
+To build the project run:
+
+```bash
+ng build
+```
+
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
+## Running unit tests
+
+To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+
+```bash
+ng test
+```
+
+## Running end-to-end tests
+
+For end-to-end (e2e) testing, run:
+
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

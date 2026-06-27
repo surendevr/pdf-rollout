@@ -7,7 +7,6 @@ import { Header } from "./header/header";
   standalone: true,
   imports: [Header, RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
 })
 export class App {
   protected readonly title = signal('pdf_rollout');
