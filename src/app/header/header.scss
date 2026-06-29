@@ -2,14 +2,20 @@
 // AWS-INSPIRED HEADER COMPONENT
 // ===================================
 
+// Ensure the Angular host element behaves as a block so that
+// position: sticky on the inner <header> works in all browsers.
+:host {
+    display: block;
+}
+
 .app-header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(22, 30, 45, 0.95);
+    background: #161E2D;          // fully opaque — prevents white bleed-through on the new light body
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     transition: all var(--transition-base);
     
     // Scroll shadow effect
@@ -30,19 +36,19 @@
         display: flex;
         align-items: center;
         gap: var(--spacing-sm);
-        color: var(--text-primary);
+        color: var(--text-on-dark);  // white text on dark header
         font-weight: 600;
         font-size: var(--font-size-lg);
         text-decoration: none;
         transition: color var(--transition-fast);
         
         .logo-icon {
-            color: var(--aws-orange);
+            color: var(--aws-blue);
             transition: transform var(--transition-base);
         }
         
         &:hover {
-            color: var(--aws-orange);
+            color: var(--aws-blue);
             
             .logo-icon {
                 transform: scale(1.1);
@@ -65,7 +71,7 @@
         justify-content: center;
         
         .nav-link {
-            color: var(--text-secondary);
+            color: var(--text-on-dark-secondary);  // white text on dark header
             font-size: var(--font-size-base);
             font-weight: 500;
             padding: var(--spacing-sm) var(--spacing-md);
@@ -81,13 +87,13 @@
                 transform: translateX(-50%);
                 width: 0;
                 height: 2px;
-                background: var(--aws-orange);
+                background: var(--aws-blue);
                 transition: width var(--transition-fast);
             }
             
             &:hover {
-                color: var(--text-primary);
-                background: rgba(255, 255, 255, 0.05);
+                color: var(--text-on-dark);
+                background: rgba(255, 255, 255, 0.08);
                 
                 &::after {
                     width: 80%;
@@ -95,7 +101,7 @@
             }
             
             &.active {
-                color: var(--aws-orange);
+                color: var(--aws-blue);
                 
                 &::after {
                     width: 80%;

@@ -29,7 +29,7 @@
         .footer-heading {
             font-size: var(--font-size-lg);
             font-weight: 600;
-            color: var(--text-primary);
+            color: var(--text-on-dark);  // white on dark footer
             margin-bottom: var(--spacing-md);
         }
         
@@ -42,12 +42,12 @@
                 margin-bottom: var(--spacing-sm);
                 
                 a {
-                    color: var(--text-secondary);
+                    color: var(--text-on-dark-secondary);
                     font-size: var(--font-size-base);
                     transition: color var(--transition-fast);
                     
                     &:hover {
-                        color: var(--aws-orange);
+                        color: var(--aws-blue);
                     }
                 }
             }
@@ -62,18 +62,18 @@
             margin-bottom: var(--spacing-md);
             
             .logo-icon {
-                color: var(--aws-orange);
+                color: var(--aws-blue);
             }
             
             .brand-name {
                 font-size: var(--font-size-xl);
                 font-weight: 700;
-                color: var(--text-primary);
+                color: var(--text-on-dark);  // white on dark footer
             }
         }
         
         .footer-description {
-            color: var(--text-secondary);
+            color: var(--text-on-dark-secondary);
             font-size: var(--font-size-base);
             line-height: 1.6;
             max-width: 300px;
@@ -94,7 +94,7 @@
         }
         
         .copyright {
-            color: var(--text-muted);
+            color: var(--text-on-dark-muted);
             font-size: var(--font-size-sm);
             margin: 0;
         }
@@ -110,13 +110,13 @@
                 width: 40px;
                 height: 40px;
                 border-radius: 50%;
-                background: var(--aws-card-bg);
-                color: var(--text-secondary);
+                background: rgba(255, 255, 255, 0.1);  // translucent on dark footer
+                color: var(--text-on-dark-secondary);
                 transition: all var(--transition-base);
                 
                 &:hover {
-                    background: var(--aws-orange);
-                    color: var(--aws-dark-blue);
+                    background: var(--aws-blue);
+                    color: #FFFFFF;
                     transform: translateY(-2px);
                 }
                 

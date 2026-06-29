@@ -18,7 +18,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: radial-gradient(ellipse at top, rgba(255, 153, 0, 0.1) 0%, transparent 50%);
+        background: radial-gradient(ellipse at top, rgba(0, 115, 187, 0.08) 0%, transparent 55%);
         pointer-events: none;
     }
     
@@ -36,7 +36,8 @@
         font-weight: 700;
         line-height: 1.1;
         margin-bottom: var(--spacing-lg);
-        background: linear-gradient(135deg, #FFFFFF 0%, #D1D5DB 100%);
+        // AWS-style: blue-to-navy gradient text on white background
+        background: linear-gradient(135deg, var(--aws-blue) 0%, var(--aws-dark-blue) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -93,7 +94,7 @@
             font-size: var(--font-size-base);
             
             .feature-icon {
-                color: var(--aws-orange);
+                color: var(--aws-blue);
             }
             
             @media (max-width: 768px) {

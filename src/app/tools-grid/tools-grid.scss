@@ -4,6 +4,7 @@
 
 .tools-grid-section {
     padding: var(--spacing-3xl) 0;
+    background-color: var(--aws-section-bg);  // light gray to contrast white cards
     
     .section-header {
         text-align: center;
@@ -69,14 +70,14 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(135deg, rgba(255, 153, 0, 0.05) 0%, transparent 100%);
+        background: linear-gradient(135deg, rgba(0, 115, 187, 0.05) 0%, transparent 100%);
         opacity: 0;
         transition: opacity var(--transition-base);
         pointer-events: none;
     }
     
     &:hover {
-        border-color: var(--aws-orange);
+        border-color: var(--aws-blue);
         transform: translateY(-8px);
         box-shadow: var(--shadow-xl);
         
@@ -85,7 +86,7 @@
         }
         
         .tool-icon {
-            color: var(--aws-orange);
+            color: var(--aws-blue);
             transform: scale(1.1);
         }
         
@@ -96,7 +97,7 @@
     }
     
     .tool-icon {
-        color: var(--aws-orange);
+        color: var(--aws-blue);
         width: 48px;
         height: 48px;
         transition: all var(--transition-base);
@@ -131,7 +132,7 @@
     }
     
     .tool-arrow {
-        color: var(--aws-orange);
+        color: var(--aws-blue);
         opacity: 0.5;
         transition: all var(--transition-base);
         align-self: flex-start;

@@ -20,9 +20,9 @@
         font-size: var(--font-size-base);
         margin-bottom: var(--spacing-md);
         transition: color var(--transition-fast);
-        
+            
         &:hover {
-            color: var(--aws-orange);
+            color: var(--aws-blue);
         }
         
         svg {
@@ -59,7 +59,7 @@
     
     .upload-zone {
         position: relative;
-        background: var(--aws-card-bg);
+        background: var(--aws-section-bg);  // light gray on white page
         border: 2px dashed var(--border-color);
         border-radius: var(--radius-lg);
         padding: var(--spacing-3xl);
@@ -67,14 +67,14 @@
         transition: all var(--transition-base);
         cursor: pointer;
         margin-bottom: var(--spacing-2xl);
-        
+            
         &:hover,
         &.drag-over {
-            border-color: var(--aws-orange);
-            background: rgba(255, 153, 0, 0.05);
-            
+            border-color: var(--aws-blue);
+            background: rgba(0, 115, 187, 0.05);
+                
             .upload-icon {
-                color: var(--aws-orange);
+                color: var(--aws-blue);
                 transform: scale(1.1);
             }
         }
@@ -131,7 +131,7 @@
             font-size: var(--font-size-base);
             
             svg {
-                color: var(--aws-orange);
+                color: var(--aws-blue);
                 flex-shrink: 0;
             }
             

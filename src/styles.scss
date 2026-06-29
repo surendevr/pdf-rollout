@@ -4,15 +4,25 @@
 // AWS-INSPIRED DESIGN SYSTEM
 // ===================================
 
-// CSS Variables - AWS Color Palette
+// CSS Variables - AWS White & Blue Color Palette
 :root {
-  // Primary AWS Colors
+  // Primary AWS Dark Colors (used for header/footer)
   --aws-dark-blue: #232F3E;
   --aws-navy: #161E2D;
-  --aws-card-bg: #1e2936;
-  --aws-orange: #FF9900;
-  --aws-orange-hover: #EC7211;
-  
+
+  // Card & Section Backgrounds (light theme)
+  --aws-card-bg: #FFFFFF;
+  --aws-section-bg: #F2F3F3;
+
+  // AWS Blue Accent (replaces orange)
+  --aws-blue: #0073BB;
+  --aws-blue-hover: #005D99;
+  --aws-light-blue: #E8F4FD;
+
+  // Backwards-compat aliases so existing component refs keep working
+  --aws-orange: #0073BB;
+  --aws-orange-hover: #005D99;
+
   // Grays
   --gray-50: #F9FAFB;
   --gray-100: #F3F4F6;
@@ -24,19 +34,25 @@
   --gray-700: #374151;
   --gray-800: #1F2937;
   --gray-900: #111827;
-  
-  // Semantic Colors
-  --text-primary: #FFFFFF;
-  --text-secondary: #D1D5DB;
-  --text-muted: #9CA3AF;
-  --border-color: rgba(255, 255, 255, 0.1);
-  --border-hover: rgba(255, 255, 255, 0.2);
-  
-  // Shadows
+
+  // Semantic Colors – light theme
+  --text-primary: #16191F;
+  --text-secondary: #545B64;
+  --text-muted: #879596;
+
+  // Text for elements sitting on dark backgrounds (header / footer)
+  --text-on-dark: #FFFFFF;
+  --text-on-dark-secondary: rgba(255, 255, 255, 0.8);
+  --text-on-dark-muted: rgba(255, 255, 255, 0.5);
+
+  --border-color: rgba(0, 0, 0, 0.1);
+  --border-hover: rgba(0, 115, 187, 0.3);
+
+  // Shadows – lighter for a white-background UI
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.12), 0 10px 10px -5px rgba(0, 0, 0, 0.06);
   
   // Spacing Scale
   --spacing-xs: 0.25rem;   // 4px
@@ -94,8 +110,7 @@ body {
   font-size: var(--font-size-base);
   line-height: 1.6;
   color: var(--text-primary);
-  background: linear-gradient(135deg, var(--aws-navy) 0%, var(--aws-dark-blue) 50%, #1a2332 100%);
-  background-attachment: fixed;
+  background: #FFFFFF;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -109,7 +124,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: var(--spacing-md);
-  color: var(--text-primary);
+  color: var(--text-primary); // now resolves to dark navy
 }
 
 h1 {
@@ -143,12 +158,12 @@ p {
 }
 
 a {
-  color: var(--aws-orange);
+  color: var(--aws-blue);
   text-decoration: none;
   transition: color var(--transition-fast);
-  
+
   &:hover {
-    color: var(--aws-orange-hover);
+    color: var(--aws-blue-hover);
   }
 }
 
@@ -179,12 +194,12 @@ a {
 
 .btn-primary {
   @extend %btn-base;
-  background: var(--aws-orange);
-  color: var(--aws-dark-blue);
+  background: var(--aws-blue);
+  color: #FFFFFF;
   font-weight: 600;
-  
+
   &:hover:not(:disabled) {
-    background: var(--aws-orange-hover);
+    background: var(--aws-blue-hover);
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
   }
@@ -193,12 +208,12 @@ a {
 .btn-secondary {
   @extend %btn-base;
   background: transparent;
-  color: var(--text-primary);
-  border: 2px solid var(--border-color);
-  
+  color: var(--aws-blue);
+  border: 2px solid var(--aws-blue);
+
   &:hover:not(:disabled) {
-    border-color: var(--aws-orange);
-    color: var(--aws-orange);
+    border-color: var(--aws-blue-hover);
+    color: var(--aws-blue-hover);
     transform: translateY(-2px);
   }
 }
@@ -207,10 +222,10 @@ a {
   @extend %btn-base;
   background: transparent;
   color: var(--text-secondary);
-  
+
   &:hover:not(:disabled) {
     color: var(--text-primary);
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 115, 187, 0.06);
   }
 }
 
@@ -224,9 +239,9 @@ a {
   border-radius: var(--radius-lg);
   padding: var(--spacing-xl);
   transition: all var(--transition-base);
-  
+
   &:hover {
-    border-color: var(--border-hover);
+    border-color: var(--aws-blue);
     transform: translateY(-4px);
     box-shadow: var(--shadow-xl);
   }
