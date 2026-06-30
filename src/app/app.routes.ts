@@ -6,6 +6,7 @@ import { CompressPdf } from './pages/compress-pdf/compress-pdf';
 import { PdfToWord } from './pages/pdf-to-word/pdf-to-word';
 import { PdfToExcel } from './pages/pdf-to-excel/pdf-to-excel';
 import { PdfToPpt } from './pages/pdf-to-ppt/pdf-to-ppt';
+import { FileGround } from './pages/file-ground/file-ground';
 
 export const routes: Routes = [
   {
@@ -14,7 +15,11 @@ export const routes: Routes = [
   },
   {
     path: 'merge-pdf',
-    component: MergePdf
+    component: MergePdf,
+  },
+  {
+    path:'align',
+    component: FileGround
   },
   {
     path: 'split-pdf',

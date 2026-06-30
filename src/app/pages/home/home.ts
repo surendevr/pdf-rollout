@@ -5,11 +5,10 @@ import { Footer } from '../../footer/footer';
 
 @Component({
   selector: 'app-home',
-  standalone: true,
   imports: [Hero, ToolsGrid, Footer],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
 export class Home {
-  
+
 }

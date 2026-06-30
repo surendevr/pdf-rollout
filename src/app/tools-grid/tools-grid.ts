@@ -11,7 +11,6 @@ interface PDFTool {
 
 @Component({
   selector: 'app-tools-grid',
-  standalone: true,
   imports: [CommonModule],
   templateUrl: './tools-grid.html',
   styleUrl: './tools-grid.scss',

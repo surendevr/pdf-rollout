@@ -11,10 +11,10 @@
             <p class="tool-description">{{ toolDescription() }}</p>
         </div>
     </div>
-    
+
     <div class="tool-content">
         <div class="container">
-            <div 
+            <div
                 class="upload-zone"
                 [class.drag-over]="isDragOver()"
                 (dragover)="onDragOver($event)"
@@ -26,15 +26,15 @@
                 </svg>
                 <h3 class="upload-title">Drop your PDF file here</h3>
                 <p class="upload-text">or click to browse your files</p>
-                <input 
-                    type="file" 
-                    accept=".pdf" 
+                <input
+                    type="file"
+                    accept=".pdf"
                     class="file-input"
                     (change)="onFileSelect($event)"
                 />
                 <button class="btn-primary btn-lg">Select PDF File</button>
             </div>
-            
+
             <div class="features-list">
                 <div class="feature">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,6 +57,5 @@
             </div>
         </div>
     </div>
-    
-    <app-footer />
+
 </div>

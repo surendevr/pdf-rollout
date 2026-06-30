@@ -1,0 +1,13 @@
+<div class="preview-container">
+  <header class="preview-header">PDF Preview</header>
+  <div class="preview-body">
+    @if (!isLoaded()) {
+      <p class="preview-placeholder">Your PDF preview will appear here.</p>
+    }
+    <div class="pages-list" #pdfContainer>
+      @for (page of pages(); track page) {
+        <canvas #canvas></canvas>
+      }
+    </div>
+  </div>
+</div>
